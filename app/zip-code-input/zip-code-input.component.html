@@ -1,0 +1,54 @@
+<style>
+    label{
+        display: block;
+        text-align: center;
+    }
+    .center-button{
+        margin-left: 50%;
+        margin-top: 10px;
+    }
+    input{
+        display:block;
+        margin:0 auto;
+    }
+    button{
+        display:block;
+        margin:0 auto;
+        border-radius: 10px;
+        color:white;
+        background-color:#1976d2;
+;
+    }
+    .alert{
+        color: red;
+    }
+    .infoCard{
+        background-color: #1976d2;
+        border-radius: 10px;
+    }
+    p{
+        text-align: center;
+        color:white;
+    }
+</style>
+
+<form>
+    <div class="form-group">
+        <label for="zipCode">Enter A Zip Code</label>
+        <input required minlength="5" maxlength="5" ngModel name="zipCode" #zipCode="ngModel" #zipCodeIn id="zipCode" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="zipCode.touched && !zipCode.valid">
+            Must be a valid US Zip Code
+        </div>
+        <br>
+
+        <button class="btn btn-primary" name="submitButton" (click)="submitZipCode(zipCodeIn.value)">Submit</button>
+
+        <div class="infoCard">
+            <p>{{zipCodeDisplay}}</p>
+            <p>{{zipResult}}</p>
+            <p>{{weatherResult}}</p>
+        </div>
+        
+        <img style="border-radius: 25px" width="400" alt="Weather Pic" src="{{weatherPic}}">
+    </div>
+</form>
