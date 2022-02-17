@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "https://www.zipcodeapi.com/rest/ncb7p0ZTmZk58BayTEW2kwk1KUfmtLhJTC44bsCqwLcJV8lxaTG0IUZshjdT1vqL",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
