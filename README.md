@@ -1,0 +1,1 @@
+# WeatherApp-Sentric - This app was created in support of my application for a Junior Developer role at SentricHR.  The majority of code changes were done in the Zip Code component and the App component.
